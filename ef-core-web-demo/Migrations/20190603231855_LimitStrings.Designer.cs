@@ -3,14 +3,16 @@ using EFCoreWebDemo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ef_core_web_demo.Migrations
 {
     [DbContext(typeof(EFCoreWebDemoContext))]
-    partial class EFCoreWebDemoContextModelSnapshot : ModelSnapshot
+    [Migration("20190603231855_LimitStrings")]
+    partial class LimitStrings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
